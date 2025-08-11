@@ -1,9 +1,7 @@
 import entities.Student;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +34,16 @@ public class Main {
             System.out.println(s.status());
             System.out.println("teste");
         }
+
+        System.out.println("You want to search a student by their ID (s/n)? ");
+        char choice = sc.next().toLowerCase().charAt(0);
+
+        if(choice == 's') {
+            System.out.println("Enter the student ID: ");
+            int ID = sc.nextInt();
+            Optional<Student> resultado = students.stream().filter(x -> x.getID() == ID).findFirst();
+        }
+
     }
 
 }
