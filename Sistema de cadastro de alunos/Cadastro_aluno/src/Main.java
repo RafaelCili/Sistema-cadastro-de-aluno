@@ -32,17 +32,43 @@ public class Main {
             System.out.println(s.getID());
             System.out.println(s.getFinalNote());
             System.out.println(s.status());
-            System.out.println("teste");
         }
 
-        System.out.println("You want to search a student by their ID (s/n)? ");
+        System.out.println("You want to search a student by their ID (y/n)? ");
         char choice = sc.next().toLowerCase().charAt(0);
 
-        if(choice == 's') {
+        if(choice == 'y') {
             System.out.println("Enter the student ID: ");
             int ID = sc.nextInt();
+
             Optional<Student> resultado = students.stream().filter(x -> x.getID() == ID).findFirst();
+
+            resultado.ifPresent(student -> System.out.println("The student is: " +
+                    student.getName() + " And his final note is " +
+                    student.getFinalNote()));
         }
+
+        System.out.println("You wish modify the final note of an student?(y/n)");
+        choice = sc.next().toLowerCase().charAt(0);
+
+        if(choice == 'y') {
+            System.out.println("Enter the student ID: ");
+            int ID = sc.nextInt();
+
+            Optional<Student> result = students.stream().filter(x -> x.getID() == ID).findFirst();
+            if(result.isPresent()) {
+                Student student = result.get();
+                System.out.println("The student is: " + student.getName());
+                System.out.println("The final note is " + student.getFinalNote());
+
+                System.out.println("Enter the new final note: ");
+                student.setFinalNote(sc.nextDouble());
+
+                System.out.println("The new final note is " + student.getFinalNote());
+            }
+
+        }
+
 
     }
 
