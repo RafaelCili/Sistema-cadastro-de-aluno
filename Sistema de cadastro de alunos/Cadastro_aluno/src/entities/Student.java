@@ -38,14 +38,14 @@ public class Student {
 
     public String status() {
         if(this.finalNote >= 6 ) {
-            return "Aprovado";
+            return "Approved";
         } else {
-            return "Reprovado";
+            return "Reproved";
         }
     }
 
     public String toString() {
-        return "The student registered is: " + name + " your ID is: " + ID + " and your final note is: " + finalNote + " and your status is: " + status();
+        return "Name: " + name + " , ID: " + ID + " , your final note is: " + finalNote + " and your status is: " + status();
     }
 
 

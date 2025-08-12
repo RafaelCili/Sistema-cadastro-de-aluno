@@ -42,7 +42,8 @@ public class StudentManager {
 
     public void searchStudents() {
         Student student;
-        System.out.println("You want to search a student by their ID (y/n)? ");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Do you want to search a student by their ID?(y/n) ");
         char choice = sc.next().toLowerCase().charAt(0);
 
         if (choice == 'y') {
@@ -70,7 +71,7 @@ public class StudentManager {
 
     public void modifyStudents() {
         Student student;
-        System.out.println("You wish modify the final note of an student?(y/n)");
+        System.out.println("Do you want to modify a student's final note?(y/n)");
         char choice = sc.next().toLowerCase().charAt(0);
 
         if (choice == 'y') {
@@ -103,7 +104,7 @@ public class StudentManager {
     }
 
     public void removeStudent() {
-        System.out.println("You want to remove a student from the list?(y/n)");
+        System.out.println("Do you want to remove a student from the list?(y/n)");
         char choice = sc.next().toLowerCase().charAt(0);
 
         if(choice == 'y') {
@@ -115,7 +116,7 @@ public class StudentManager {
                 Optional<Student> toRemove = students.stream().filter(x -> x.getID() == ID).findFirst();
 
                 if(toRemove.isPresent()) {
-                    System.out.println("The student who was removed is: " + toRemove.get().getName());
+                    System.out.println("The student who was removed: " + toRemove.get().getName());
                     students.remove(toRemove.get());
                     break;
                 } else {
