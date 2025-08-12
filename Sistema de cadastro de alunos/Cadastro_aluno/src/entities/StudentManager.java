@@ -1,5 +1,4 @@
 package entities;
-import entities.Student;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -7,12 +6,10 @@ import java.util.Scanner;
 
 public class StudentManager {
 
-    public StudentManager() {
-        List<Student> students = new ArrayList<>();
-    }
+    private final Scanner sc =  new Scanner(System.in);
+    private final List<Student> students = new ArrayList<>();
 
-
-    public void studentsRegister(List<Student> students, Scanner sc) {
+    public void studentsRegister() {
         System.out.println("Enter how many students will be registered? ");
         int n = sc.nextInt();
 
@@ -33,7 +30,7 @@ public class StudentManager {
 
     }
 
-    public void Register(List<Student> students) {
+    public void Register() {
         int i = 0;
         for (Student s : students) {
             i++;
@@ -43,7 +40,7 @@ public class StudentManager {
         }
     }
 
-    public void searchStudents(List<Student> students, Scanner sc) {
+    public void searchStudents() {
         Student student;
         System.out.println("You want to search a student by their ID (y/n)? ");
         char choice = sc.next().toLowerCase().charAt(0);
@@ -71,7 +68,7 @@ public class StudentManager {
 
     }
 
-    public void modifyStudents(List<Student> students, Scanner sc) {
+    public void modifyStudents() {
         Student student;
         System.out.println("You wish modify the final note of an student?(y/n)");
         char choice = sc.next().toLowerCase().charAt(0);
@@ -105,7 +102,7 @@ public class StudentManager {
 
     }
 
-    public void removeStudent(List<Student> students, Scanner sc) {
+    public void removeStudent() {
         System.out.println("You want to remove a student from the list?(y/n)");
         char choice = sc.next().toLowerCase().charAt(0);
 

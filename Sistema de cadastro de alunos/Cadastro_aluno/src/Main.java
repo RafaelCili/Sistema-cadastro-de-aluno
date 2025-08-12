@@ -12,15 +12,14 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        List<Student> students = new ArrayList<>();
         StudentManager manager = new StudentManager();
 
-        manager.studentsRegister(students, sc);
-        manager.Register(students);
-        manager.searchStudents(students, sc);
-        manager.modifyStudents(students, sc);
-        manager.removeStudent(students, sc);
-        manager.Register(students);
+        manager.studentsRegister();
+        manager.Register();
+        manager.searchStudents();
+        manager.modifyStudents();
+        manager.removeStudent();
+        manager.Register();
 
         sc.close();
 
