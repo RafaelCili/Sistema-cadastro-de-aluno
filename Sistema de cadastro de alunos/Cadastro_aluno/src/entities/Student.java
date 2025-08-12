@@ -6,9 +6,6 @@ public class Student {
     private int ID;
     private double finalNote;
 
-    public Student() {
-    }
-
     public Student(String name, int ID, double notaFinal) {
         this.name = name;
         this.ID = ID;
@@ -39,10 +36,6 @@ public class Student {
         }
     }
 
-    public void changeName(String newName) {
-        setName(newName);
-    }
-
     public String status() {
         if(this.finalNote >= 6 ) {
             return "Aprovado";
@@ -51,8 +44,8 @@ public class Student {
         }
     }
 
-    public void idCompare() {
-
+    public String toString() {
+        return "The student registered is: " + name + " your ID is: " + ID + " and your final note is: " + finalNote + " and your status is: " + status();
     }
 
 
