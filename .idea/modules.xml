@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-
-      <module fileurl="file://$PROJECT_DIR$/.idea/Sistema-cadastro-de-aluno.iml" filepath="$PROJECT_DIR$/.idea/Sistema-cadastro-de-aluno.iml" />
-
-
-
+      <module fileurl="file://$PROJECT_DIR$/Sistema-cadastro-de-aluno.iml" filepath="$PROJECT_DIR$/Sistema-cadastro-de-aluno.iml" />
     </modules>
   </component>
 </project>
