@@ -1,2 +1,3 @@
 # Sistema-cadastro-de-aluno
-Fazer um sistema onde posso criar um aluno, mostrar os seus dados, editar eles e excluir algum dado do aluno.
+Esse sistema serve para fazer o cadastro de vários alunos, modificar os seus dados e excluí-los
+Foi usado ArrayList e Classes, também usei o o primeiro príncipio de SOLID; O Single Responsiblity Principle.
