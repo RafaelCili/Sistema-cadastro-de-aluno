@@ -9,9 +9,9 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, int matriculation, double notaFinal) {
+    public Student(String name, int ID, double notaFinal) {
         this.name = name;
-        this.ID = matriculation;
+        this.ID = ID;
         this.finalNote = notaFinal;
     }
 
@@ -35,7 +35,7 @@ public class Student {
         if(finalNote >= 0 && finalNote <= 10) {
             this.finalNote = finalNote;
         } else {
-            throw new IllegalArgumentException("Enter a valid note! The note must be between 0 and 10");
+            System.out.println("Enter a valid note! The note must be between 0 and 10");
         }
     }
 
@@ -49,6 +49,10 @@ public class Student {
         } else {
             return "Reprovado";
         }
+    }
+
+    public void idCompare() {
+
     }
 
 
